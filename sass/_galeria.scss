@@ -1,0 +1,49 @@
+
+@use 'variables';
+@use 'mixins';
+
+.galeria{
+        
+    &__image-container{
+        width: 100%;
+        height: 300px;
+        background-image: url('../images/jordan1-grande.jpg');
+        background-position-y: -65px;
+        background-size: cover;
+        position: relative;
+        &:hover{
+            cursor: pointer;
+        }
+        
+    }
+    &__image-previo{
+        @include mixins.imagen-btn(170px, 15px, false);
+    }
+    &__image-next{
+        @include mixins.imagen-btn(170px, 320px, false);
+    }
+    &__miniaturas{
+        display: none;
+        @media (min-width: 1115px){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__miniatura{
+        width: 90px;
+        border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid cornflowerblue;
+        }
+    }
+    @media (min-width: 1115px){
+        width: 446px;
+        &__image-container{
+            background-position-y: 0;
+            border-radius: 16px;
+            height: 446px;
+            margin-bottom: 32px;
+        }
+    }
+}

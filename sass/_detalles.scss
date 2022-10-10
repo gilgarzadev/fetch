@@ -1,0 +1,76 @@
+@use 'variables';
+@use 'mixins';
+
+.detalles{
+    // border: 1px solid red;
+    padding: 24px;
+    &__company{
+        color: variables.$Orange;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+
+    }
+    &__titulo{
+        font-size: 1.7em;
+        margin-bottom: 16px;
+    }
+    &__descripcion{
+        font-size: 0.94em;
+        color: variables.$Dark-grayish-blue;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    &__precios{
+        //border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+    &__precio_ahora{
+        font-size: 1.8em;
+        font-weight: 700;
+        //border: 1px solid blue;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    &__descuento{
+        font-size: 0.5em;
+        background-color: variables.$Pale-orange;
+        color: variables.$Orange;
+        padding: 4px;
+        border: 4px;
+    }
+    &__precio_antes{
+        font-weight: 700;
+        color: variables.$Dark-grayish-blue;
+        text-decoration: line-through;
+    }
+    &__button{
+        @include mixins.button;
+    }
+    
+    @media (min-width: 1115px){
+        width: 446px;
+        padding-top: 60px;
+        &__titulo{
+            font-size: 2.7em;
+            margin-top: 48px;
+        }
+        &__descripcion{
+            font-size: 0.9em;
+            margin-bottom: 37px;
+        }
+        &__precios{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__producto-cantidad{
+            display: flex;
+            gap: 32px;
+        }
+    }
+}

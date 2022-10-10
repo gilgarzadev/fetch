@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'mixins';
+
+/* .foot{
+    //border: 1px solid green;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+   //gap: 18px;
+} */
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+.image-container{
+    display: flex;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+
+
+
+
+#boton{
+    height: 50px;
+    border-radius: 5px;
+    background-color: variables.$Orange;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: variables.$Black-modal;
+}
